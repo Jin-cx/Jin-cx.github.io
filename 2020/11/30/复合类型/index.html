@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>第四章-复合类型部分 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="复合类型内容总结： 要创建数组，可使用声明语句。数组声明应指出三点： ①. 存储在每个元素中的值的类型">
+  <meta name="description" content="复合类型重点摘录： 要创建数组，可使用声明语句。数组声明应指出三点： ①. 存储在每个元素中的值的类型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第四章-复合类型部分">
 <meta property="og:url" content="http://example.com/2020/11/30/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="复合类型内容总结： 要创建数组，可使用声明语句。数组声明应指出三点： ①. 存储在每个元素中的值的类型">
+<meta property="og:description" content="复合类型重点摘录： 要创建数组，可使用声明语句。数组声明应指出三点： ①. 存储在每个元素中的值的类型">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-30T14:25:59.000Z">
-<meta property="article:modified_time" content="2020-11-30T14:32:10.038Z">
+<meta property="article:modified_time" content="2020-12-02T07:36:37.407Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -174,15 +174,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="复合类型"><a href="#复合类型" class="headerlink" title="复合类型"></a>复合类型</h2><h3 id="内容总结："><a href="#内容总结：" class="headerlink" title="内容总结："></a>内容总结：</h3><ol>
+        <h2 id="复合类型"><a href="#复合类型" class="headerlink" title="复合类型"></a>复合类型</h2><h3 id="重点摘录："><a href="#重点摘录：" class="headerlink" title="重点摘录："></a>重点摘录：</h3><ol>
 <li><p>要创建数组，可使用声明语句。数组声明应指出三点：</p>
 <p>①. 存储在每个元素中的值的类型</p>
 </li>
 </ol>
 <a id="more"></a>
 
-<p>​    ②. 数组名</p>
-<p>​    ③. 数组中的元素数</p>
+<p>​         ②. 数组名</p>
+<p>​        ③. 数组中的元素数</p>
 <p>​    声明数组的通用格式如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeName arrayName[arraySize]</span><br></pre></td></tr></table></figure>
 
@@ -228,6 +228,70 @@
 
 <ol start="10">
 <li>混合输入数字和面向行的字符串会导致问题：cin在读取数字时，将回车键生成的换行符留在了输入队列中。后面的getling()看到换行符后，将认为是一个空行，并将一个空字符串赋给address数组。</li>
+<li>要使用string类，必须在程序中包含头文件string。string类位于名称空间std中，必须使用std::string来引用。string类定义隐藏了字符串的数组性质。</li>
+<li>string对象和字符数组之间的主要区别是，可以将string对象声明为简单变量，而不是数组，类设计让程序能够自动处理string大小。</li>
+<li>不能将一个数组赋给另一个数组，但可以将一个string对象赋给另一个string对象。</li>
+<li>可以使用运算符+将两个对象合并起来，还可以使用运算符+=将字符串附加到string对象的结尾。</li>
+<li>使用函数strcpy()将字符串复制到字符数组中，使用函数strcat()将字符串附加到字符数组末尾。</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strcpy</span>(charr1,charr2);<span class="comment">//copy charr2 to charr1</span></span><br><span class="line"><span class="built_in">strcat</span>(charr1,charr2);<span class="comment">//append contents of charr2 to charr1</span></span><br></pre></td></tr></table></figure>
+
+<ol start="16">
+<li><p>C++允许在声明结构变量时省略关键词const。</p>
+</li>
+<li><p>注意：在声明struct时，用;隔开</p>
+<p>​            在使用结构时，用,隔开</p>
+</li>
+<li><p>共同体是一种数据格式，它能够存储不同的数据类型，但只能同时存储其中的一种类型。共同体每次只能存储一个值，所以共同体的长度为其最大成员的长度。</p>
+</li>
+<li><p>int*是一种类型—-指向int的指针。</p>
+</li>
+<li><p>警告：一定要在对指针应用解除引用运算符，将指针初始化位一个确定的、适当的地址。这是关于使用指针的金科玉律。</p>
+</li>
+<li><p>new将找到一个长度正确的内存块、并返回该内存块的地址。</p>
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeName * pointer_name = <span class="keyword">new</span> typeName;</span><br></pre></td></tr></table></figure>
+
+<ol start="22">
+<li>释放ps指向的内存，但不会删除指针ps本身。一定要配对的使用new和delete，否则将发生内存泄漏。不要尝试释放已经释放的内存块。只能用delete来释放使用new分配的内存。然而，对空指针使用delete是安全的。</li>
+<li>在编译时给数组分配内存被称为静态编译，意味着数组是在编译时加入到程序中。但使用new时，如果在运行阶段需要数组，则创建它；如果不需要，则不创建。还可以在程序运行时选择数组的长度。—-动态编译，意味着数组是在程序运行时创建的。</li>
+<li>使用new创建动态数组：只要将数组的元素类型和元素数目告诉new</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * psome = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">10</span>];<span class="comment">//new运算符返回第一个元素的地址</span></span><br><span class="line"><span class="keyword">delete</span> [] psome;<span class="comment">//使用new创建的数组，使用另一种格式的delete来释放</span></span><br></pre></td></tr></table></figure>
+
+<ol start="25">
+<li>使用new和delete时，应遵守以下规则<ul>
+<li>不要使用delete来释放不是new分配的内存。</li>
+<li>不要使用delete释放同一个内存块两次。</li>
+<li>如果使用new[]为数组分配内存，则应使用delete[]来释放。</li>
+<li>如果使用new为一个实体分配内存，则应使用delete来释放。</li>
+<li>对空指针应用delete是安全的。</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type_name * pointer_name = <span class="keyword">new</span> type_name [num_elements];<span class="comment">//为数组分配内存的通用格式</span></span><br></pre></td></tr></table></figure>
+
+<ol start="26">
+<li>数组名被解释为其第一个元素的地址，而对数组名应用地址运算符时，得到的是整个数组的地址。</li>
+<li>在cout和多数c++表达式中，char数组名、char数组以及用引号括起的字符串常量都被解释为字符串第一个字符的地址。</li>
+<li>一般来说，如果给cout提供一个指针，他将打印地址。但如果指针的类型为char*，则cout将显示指向的字符串。</li>
+<li>应使用strcpy()或strncpy()，而不是赋值运算来将字符串赋给数组。</li>
+<li>如果结构标识符是结构名，则使用句点运算符；如果标识符是指向结构的指针，则使用箭头运算。</li>
+<li>C++有3种管理数据内存的方式：自动存储、静态存储和动态存储。</li>
+<li>自动变量通常存储在栈中—-后进先出(LIFO).</li>
+<li>静态存储是整个程序执行期间都存在的存储方式。使变量成为静态的方式有两种：一种是在函数外面定义它；另一种是在声明变量时使用关键字static。自动存储与静态存储的关键在于：这些方法严格地限制了变量的寿命。变量可能存于程序的整个生命周期(静态变量),也可能只是在特定函数被执行时存在（自动变量）。</li>
+</ol>
+<h3 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h3><ol>
+<li>数组、结构和指针是C++的3种复合类型。数组可以在一个数据对象中存储多个同种类型的值。通过使用索引或下标，可以访问数组中的各个元素。</li>
+<li>结构可以将多个不同类型的值存在在同一个数据对象中，可以使用成员运算符（.）来访问其中的成员。使用结构的第一步是创建结构模板，它定义结构存储了哪些成员。模板的名称将成为新类型的标识符，然后就可以声明这种类型的结构变量。</li>
+<li>共同体可以存储一个值，但是这个值可以是不同的类型，成员名指出了使用的模式。</li>
+<li>指针是被设计用来存储地址的变量。指针指向它存储的地址。指针声明指出了指针指向的对象类型。对指针应用解除引用运算符，将得到指针指向的位置中的值。</li>
+<li>字符串是以空字符为结尾的一系列字符。字符串可用括号括起的字符串常量表示，其中隐式包含了结尾的空字符。可以将字符串存储在char数组中，可以用被初始化的指向字符串的char指针表示字符串。函数strlen()返回字符串的长度，其中不包括空字符。函数strcpy()将字符串从一个位置复制到另一个位置。在使用这些函数时，应当包含头文件cstring或string.h。</li>
+<li>头文件string支持的C++string类提供了另一种对用户更友好的字符串处理方法。具体地说，string对象将根据要存储的字符串自动调整去其大小，用户可以使用赋值运算来复制字符串。</li>
+<li>new运算符允许在程序运行时为数据对象请求内存。该运算符返回获得内存的地址，可以将这个地址赋给一个指针，程序将只能使用该指针来访问这块内存。如果数据对象是简单变量，则可以使用解除引用运算符（*）来获得其值；如果数据对象是数组，则可以像使用数组名那样使用指针来访问元素；如果数据对象是结构，则可以用指针解除引用运算符（-&gt;）来访问其成员。</li>
+<li>指针和数组紧密相关。如果ar是数组名，则表达式ar[i]被解释为*(ar+i)，其中数组名被解释为数组第一个元素的地址。这样，数组名的作用和指针相同。反过来，可以使用数组表示法，通过指针名来访问new分配的数组中的元素。</li>
+<li>运算符new和delete允许显式控制何时给数据对象分配内存，何时将内存归还给内存池。自动变量是在函数中声明的变量，而静态变量是在函数外部或者使用关键字static声明的变量，这两种变量都不太灵活。自动变量在程序执行到所属的代码块时产生，在离该代码时终止。静态变量在整个程序周期内都存在。</li>
 </ol>
 
       
