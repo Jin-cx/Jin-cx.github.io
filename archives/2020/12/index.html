@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Archives: 2020/12 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/archives/2020/12/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -152,507 +152,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-类和对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/04/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">类和对象</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/04/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/12/04/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
   	<time datetime="2020-12-04T02:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-04</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="4-类和对象"><a href="#4-类和对象" class="headerlink" title="4 类和对象"></a>4 类和对象</h1><p>C++ 面向对象：封装、继承、多态</p>
-<p>C++认为万事万物皆为对象，对象上有其属性和行为</p>
-<h2 id="4-1-封装"><a href="#4-1-封装" class="headerlink" title="4.1 封装"></a>4.1 封装</h2><h3 id="4-1-1-封装的意义"><a href="#4-1-1-封装的意义" class="headerlink" title="4.1.1 封装的意义"></a>4.1.1 封装的意义</h3><p>封装是C++面向对象三大特性之一</p>
-<p>封装的意义：</p>
-<ul>
-<li><p>将属性和行为作为一个整体，表现生活中的事物</p>
-</li>
-<li><p>将属性和行为加以权限控制</p>
-</li>
-</ul>
-<p>语法：class 类名{  访问权限：属性 / 行为 };</p>
-<p><strong>示例1</strong>：设计一个圆类，求圆的周长</p>
-<p><strong>示例代码：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI = <span class="number">3.14</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="comment">//访问权限</span></span><br><span class="line">    <span class="comment">//公共权限</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//属性</span></span><br><span class="line">    <span class="comment">//半径</span></span><br><span class="line">    <span class="keyword">int</span> m_r;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//行为</span></span><br><span class="line">    <span class="comment">//获取圆的周长</span></span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">calculateZC</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * PI* m_r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Circle c1;</span><br><span class="line">    c1.m_r=<span class="number">10</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;圆的周长： &quot;</span>&lt;&lt;c1.calculateZC()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>封装的意义二：</p>
-<p>类在设计时，可以把属性和行为放在不同的权限下，加以控制</p>
-<p>访问权限有三种：</p>
-<ol>
-<li>public 公共权限          成员在类内可以访问，类外可以访问</li>
-<li>protected 保护权限   成员类内可以访问，类外不可以访问 </li>
-<li>private 私有权限        成员类内可以访问，类外不可以访问</li>
-</ol>
-<p>实例：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">string</span> m_Name;</span><br><span class="line">    <span class="keyword">protected</span>:</span><br><span class="line">    <span class="built_in">string</span> m_Car;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_Password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-1-2-struct和class区别"><a href="#4-1-2-struct和class区别" class="headerlink" title="4.1.2 struct和class区别"></a>4.1.2 struct和class区别</h3><p>在C++中struct和class唯一的区别就在于默认的访问权限不同</p>
-<p>区别：</p>
-<ul>
-<li>struct 默认权限为公共</li>
-<li>class 默认权限为私有</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C1</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> m_A;<span class="comment">//默认是私有权限</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">C2</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> m_A;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    C1 c1;</span><br><span class="line">    c1.m_A = <span class="number">10</span>;<span class="comment">//错误，访问权限是私有</span></span><br><span class="line">    </span><br><span class="line">    C2 c2;</span><br><span class="line">    c2.m_A = <span class="number">10</span> ;<span class="comment">//正确，访问权限时公共</span></span><br><span class="line">    </span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-1-3-成员属性设为私有"><a href="#4-1-3-成员属性设为私有" class="headerlink" title="4.1.3 成员属性设为私有"></a>4.1.3 成员属性设为私有</h3><p><strong>优点一</strong>：将所有成员属性设置为私有，可以自己控制读写权限</p>
-<p><strong>优点二</strong>：对于写权限，可以检测数据的有效性</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//姓名设置为可读可写</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setName</span><span class="params">(<span class="built_in">string</span> name)</span></span>&#123;</span><br><span class="line">        m_Name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">getName</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> m_Name;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//获取年龄</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> m_age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//设置年龄</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (age &lt; <span class="number">0</span> || age &gt;<span class="number">150</span>)&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;超载&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        m_age=age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//情人设置为只写</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setLover</span><span class="params">(<span class="built_in">string</span> lover)</span></span>&#123;</span><br><span class="line">        m_Lover=lover;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">string</span> m_Name;<span class="comment">//只读可写 姓名</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> m_Age;<span class="comment">//只读  年龄</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">string</span> m_Lover; 只写 情人</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Person p;</span><br><span class="line">    <span class="comment">//姓名设置</span></span><br><span class="line">    p.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;姓名： &quot;</span>&lt;&lt;p.getName()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//年龄设置</span></span><br><span class="line">    p.setAge(<span class="number">50</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;年龄： &quot;</span>&lt;&lt;p.getAge()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//情人设置</span></span><br><span class="line">    p.srtLover(<span class="string">&quot;苍进&quot;</span>);</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>练习案例：</strong></p>
-<p>设计立方体类</p>
-<p>求出立方体面积和体积</p>
-<p>分别用全局函数和成员函数判断两个立方体是否相等</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cube</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//长</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setL</span><span class="params">(<span class="keyword">int</span> l)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		m_L = l;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getL</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m_L;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//宽</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setW</span><span class="params">(<span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		m_W = w;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getW</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m_W;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//高</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setH</span><span class="params">(<span class="keyword">int</span> h)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		m_H = h;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getH</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m_H;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">calculateS</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * m_H*m_L + <span class="number">2</span> * m_H*m_W + <span class="number">2</span> * m_L*m_W;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">calculateV</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m_H * m_L*m_W;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> m_L;<span class="comment">//长</span></span><br><span class="line">	<span class="keyword">int</span> m_W;</span><br><span class="line">	<span class="keyword">int</span> m_H;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isSame</span><span class="params">(Cube &amp;c1, Cube &amp;c2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (c1.getL() == c2.getL() &amp;&amp; c1.getH() == c2.getH() &amp;&amp; c1.getW() == c2.getW())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Cube c1;</span><br><span class="line">	c1.setH(<span class="number">10</span>);</span><br><span class="line">	c1.setL(<span class="number">10</span>);</span><br><span class="line">	c1.setW(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;面积： &quot;</span> &lt;&lt; c1.calculateS() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;体积： &quot;</span> &lt;&lt; c1.calculateV() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	Cube c2;</span><br><span class="line">	c2.setH(<span class="number">20</span>);</span><br><span class="line">	c2.setL(<span class="number">20</span>);</span><br><span class="line">	c2.setW(<span class="number">20</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">bool</span> ret = isSame(c1, c2);</span><br><span class="line">	<span class="keyword">if</span> (ret)</span><br><span class="line">	&#123;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;c1和c2一致&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;不一致&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/04/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-复合类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/30/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">第四章-复合类型部分</a>
+      <a class="archive-article-title" href="/2020/12/04/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">类和对象</a>
     </h1>
   
 
-        
-        <a href="/2020/11/30/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-11-30T14:25:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="复合类型"><a href="#复合类型" class="headerlink" title="复合类型"></a>复合类型</h2><h3 id="重点摘录："><a href="#重点摘录：" class="headerlink" title="重点摘录："></a>重点摘录：</h3><ol>
-<li><p>要创建数组，可使用声明语句。数组声明应指出三点：</p>
-<p>①. 存储在每个元素中的值的类型</p>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2020/11/30/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/#more">more >></a>
-        
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/30/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-数据处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/30/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">第三章-数据处理部分</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/30/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-11-30T14:24:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数据处理（总结）"><a href="#数据处理（总结）" class="headerlink" title="数据处理（总结）"></a>数据处理（总结）</h2><h3 id="内容总结"><a href="#内容总结" class="headerlink" title="内容总结"></a>内容总结</h3><ol>
-<li>C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和unsigned long long。还有一种wchar_t类型，它在这个序列中的位置取决于实现。C++11新增了类型char16_t和char32_t，他们的宽度足以分别存储16和32位的字符编码。C++确保了char足够大，能存储系统基本字符集中的任何成员，而wchar_t则可以存储系统扩展字符集中的任何成员，short至少16位，而int至少与short一样长，long至少32位，且至少和int一样长确切的长度取决于实现。</li>
-<li>字符通过其数值编码来表示。I/O系统决定了编码是被解释为字符还是数字。</li>
-<li>浮点类型可以表示小数值以及比整型能够能够表示的值大得多的值。3种浮点类型分别是float、double和long double。C++确保float不比double长，而double不比long double长。通常，float使用32位内存，double使用64位，long double使用80-128位。</li>
-</ol>
-        
-          <a class="article-more-a" href="/2020/11/30/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/30/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-开始学C++" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/29/%E5%BC%80%E5%A7%8B%E5%AD%A6C++/">C++ learning</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/29/%E5%BC%80%E5%A7%8B%E5%AD%A6C++/" class="archive-article-date">
-  	<time datetime="2020-11-29T12:18:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-Primer-Plus"><a href="#C-Primer-Plus" class="headerlink" title="C++ Primer Plus"></a>C++ Primer Plus</h1><p>本文章主要是对C++入门级图书《C++ Primer Plus》的个人学习笔记，摘录本人在学习过程中的学习重点以及一些问题。以下内容按照书的各个章节进行记录，希望能把这砖头书啃下来，加油。</p>
-        
-          <a class="article-more-a" href="/2020/11/29/%E5%BC%80%E5%A7%8B%E5%AD%A6C++/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/29/%E5%BC%80%E5%A7%8B%E5%AD%A6C++/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-通讯录管理系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/26/%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">通讯录管理系统</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/26/%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2020-11-26T14:05:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="通讯录管理系统"><a href="#通讯录管理系统" class="headerlink" title="通讯录管理系统"></a>通讯录管理系统</h1><p>声明：本demo是根据b站黑马C++教学视频学习的，网站网址为：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1et411b73Z?p=72">https://www.bilibili.com/video/BV1et411b73Z?p=72</a></p>
-<p>本人在上述功能中做了一些改变，力求完善该系统，减少可能发生的bug。但是本人实力有限，也是萌新，一起学习C++。</p>
-        
-          <a class="article-more-a" href="/2020/11/26/%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/26/%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySql-基础学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">MySql 基础学习</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/25/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-11-25T05:40:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/25/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-My-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/My-First-Blog/">My First Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/25/My-First-Blog/" class="archive-article-date">
-  	<time datetime="2020-11-25T02:03:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>终于开始写博客了，加油！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/25/My-First-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -674,9 +214,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
