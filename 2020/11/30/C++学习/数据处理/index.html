@@ -16,8 +16,9 @@
 <meta property="og:description" content="数据处理（总结）内容总结 C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和un">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-30T14:24:45.000Z">
-<meta property="article:modified_time" content="2020-11-30T14:30:57.523Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2021-05-25T07:46:35.926Z">
+<meta property="article:author" content="Jin-cx">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -38,7 +39,20 @@
 
 <meta name="generator" content="Hexo 5.2.0"></head>
 
+
+<!-- 《页面点击小红心 -->
+
+    <script type="text/javascript" src="/js/love.js"></script>
+
+<!-- 页面点击小红心》 -->
+
+<!-- 雪花特效2 -->
+
+  <script type="text/javascript" src="/snow2.js"></script>
+
+
 <body>
+
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
@@ -65,20 +79,23 @@
 	        
 			</ul>
 		</nav>
+		<nav>
+	    总文章数 13
+	</nav>
 		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
+			
+				
+				<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+				
+	        
+				
+				<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+				
+	        
+				
+				<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+				
+	        
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
@@ -167,6 +184,17 @@
     </h1>
   
 
+            <!--显示阅读次数-->
+
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+  	阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+
+<!--显示阅读次数完毕-->
         
         <a href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="archive-article-date">
   	<time datetime="2020-11-30T14:24:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-30</time>
@@ -254,10 +282,21 @@
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
 
+      
+    
       
         
 <div class="share-btn share-icons tooltip-left">
@@ -355,7 +394,7 @@
 
 
   
-  
+
   
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
@@ -383,7 +422,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2021 Jin-cx
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -391,6 +430,10 @@
     </div>
   </div>
 </footer>
+
+<!--页面点击小红心-->
+
+<script type="text/javascript" src="/love.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -464,6 +507,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">说点啥</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySqL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
