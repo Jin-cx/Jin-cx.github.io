@@ -75,7 +75,7 @@
 			</ul>
 		</nav>
 		<nav>
-	    总文章数 14
+	    总文章数 15
 	</nav>
 		<nav class="header-smart-menu">
 			
@@ -170,6 +170,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-剑指offer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/03/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+    </h1>
+  
+
+            <!--显示阅读次数-->
+
+<!--显示阅读次数完毕-->
+        
+        <a href="/2021/07/03/%E5%89%91%E6%8C%87offer/" class="archive-article-date">
+  	<time datetime="2021-07-03T06:45:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、简单题</p>
+<ul>
+<li>求和</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> sumNums = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;  </span><br><span class="line"><span class="keyword">return</span> n&amp;&amp;sumNums(n-<span class="number">1</span>)+n</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>圆圈中最后剩下的数字</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 0,1,···,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字（删除后从下一个数字开始* * 计数）。求出这个圆圈里剩下的最后一个数字。</span></span><br><span class="line"><span class="comment">* 例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lastRemaining = <span class="function"><span class="keyword">function</span>(<span class="params">n, m</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) arr.push(i);</span><br><span class="line">    <span class="keyword">let</span> head = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(arr.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        head = (head + m - <span class="number">1</span>) % arr.length;</span><br><span class="line">        arr.splice(head, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr[<span class="number">0</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/03/%E5%89%91%E6%8C%87offer/">光翼展开 >></a>
+        </p>
+      
+    
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-算法-Ⅱ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -193,7 +280,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="LeeCode"><a href="#LeeCode" class="headerlink" title="LeeCode"></a>LeeCode</h2>
+        <h1 id="LeeCode"><a href="#LeeCode" class="headerlink" title="LeeCode"></a>LeeCode</h1>
         
           <a class="article-more-a" href="/2021/06/02/%E7%AE%97%E6%B3%95-%E2%85%A1/#more">more >></a>
         
@@ -888,89 +975,6 @@
 
 
   
-    <article id="post-C++学习/数据处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">第三章-数据处理部分</a>
-    </h1>
-  
-
-            <!--显示阅读次数-->
-
-<!--显示阅读次数完毕-->
-        
-        <a href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-11-30T14:24:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数据处理（总结）"><a href="#数据处理（总结）" class="headerlink" title="数据处理（总结）"></a>数据处理（总结）</h2><h3 id="内容总结"><a href="#内容总结" class="headerlink" title="内容总结"></a>内容总结</h3><ol>
-<li>C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和unsigned long long。还有一种wchar_t类型，它在这个序列中的位置取决于实现。C++11新增了类型char16_t和char32_t，他们的宽度足以分别存储16和32位的字符编码。C++确保了char足够大，能存储系统基本字符集中的任何成员，而wchar_t则可以存储系统扩展字符集中的任何成员，short至少16位，而int至少与short一样长，long至少32位，且至少和int一样长确切的长度取决于实现。</li>
-<li>字符通过其数值编码来表示。I/O系统决定了编码是被解释为字符还是数字。</li>
-<li>浮点类型可以表示小数值以及比整型能够能够表示的值大得多的值。3种浮点类型分别是float、double和long double。C++确保float不比double长，而double不比long double长。通常，float使用32位内存，double使用64位，long double使用80-128位。</li>
-</ol>
-        
-          <a class="article-more-a" href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">光翼展开 >></a>
-        </p>
-      
-    
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1072,15 +1076,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">说点啥</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">

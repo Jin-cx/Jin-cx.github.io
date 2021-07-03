@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>第三章-数据处理部分 | Hexo</title>
+  <title>剑指offer | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据处理（总结）内容总结 C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和un">
+  <meta name="description" content="一、简单题  求和  123456&#x2F;*** 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。*&#x2F;var sumNums &#x3D; function(n) &amp;#123;  return n&amp;&amp;sumNums(n-1)+n&amp;#125;;   圆圈中最后剩下的数字  12345678910111213">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第三章-数据处理部分">
-<meta property="og:url" content="http://example.com/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.html">
+<meta property="og:title" content="剑指offer">
+<meta property="og:url" content="http://example.com/2021/07/03/%E5%89%91%E6%8C%87offer/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="数据处理（总结）内容总结 C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和un">
+<meta property="og:description" content="一、简单题  求和  123456&#x2F;*** 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。*&#x2F;var sumNums &#x3D; function(n) &amp;#123;  return n&amp;&amp;sumNums(n-1)+n&amp;#125;;   圆圈中最后剩下的数字  12345678910111213">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-30T14:24:45.000Z">
-<meta property="article:modified_time" content="2021-05-25T07:46:35.926Z">
+<meta property="article:published_time" content="2021-07-03T06:45:36.000Z">
+<meta property="article:modified_time" content="2021-07-03T06:49:05.926Z">
 <meta property="article:author" content="Jin-cx">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -173,14 +173,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++学习/数据处理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-剑指offer" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第三章-数据处理部分
+      剑指offer
     </h1>
   
 
@@ -196,63 +196,25 @@
 
 <!--显示阅读次数完毕-->
         
-        <a href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-11-30T14:24:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-30</time>
+        <a href="/2021/07/03/%E5%89%91%E6%8C%87offer/" class="archive-article-date">
+  	<time datetime="2021-07-03T06:45:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数据处理（总结）"><a href="#数据处理（总结）" class="headerlink" title="数据处理（总结）"></a>数据处理（总结）</h2><h3 id="内容总结"><a href="#内容总结" class="headerlink" title="内容总结"></a>内容总结</h3><ol>
-<li>C++的基本类型分为两组：一组由存储整数的值组成，另一组由存储为浮点格式的值组成。整型之间通过存储值时使用的内存量及有无符号来区分。整形从最小到最大依次是：bool、char、signed char、unsigned char、short、unsigned short、int、unsigned int、unsigned long以及C++11新增的long long和unsigned long long。还有一种wchar_t类型，它在这个序列中的位置取决于实现。C++11新增了类型char16_t和char32_t，他们的宽度足以分别存储16和32位的字符编码。C++确保了char足够大，能存储系统基本字符集中的任何成员，而wchar_t则可以存储系统扩展字符集中的任何成员，short至少16位，而int至少与short一样长，long至少32位，且至少和int一样长确切的长度取决于实现。</li>
-<li>字符通过其数值编码来表示。I/O系统决定了编码是被解释为字符还是数字。</li>
-<li>浮点类型可以表示小数值以及比整型能够能够表示的值大得多的值。3种浮点类型分别是float、double和long double。C++确保float不比double长，而double不比long double长。通常，float使用32位内存，double使用64位，long double使用80-128位。</li>
-</ol>
-<a id="more"></a>
+        <p>一、简单题</p>
+<ul>
+<li>求和</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">var</span> sumNums = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;  </span><br><span class="line"><span class="keyword">return</span> n&amp;&amp;sumNums(n-<span class="number">1</span>)+n</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<ol>
-<li><p>通过提供各种长度不同、有符号或无符号的类型，C++使程序员能够根据特定的数据要求选择合适的类型。</p>
-</li>
-<li><p>C++使用运算符来提供对数字类型的算术运算：加、减、乘、除和求模。当两个运算符对同一操作数进行时，C++的优先级和结合性规则可以确定先执行哪种操作。</p>
-</li>
-<li><p>对变量赋值、在运算中使用不同类型、使用强制类型转换时，C++将把值从一种类型转换为另一种类型。很多类型转换都是安全的，即可以在不损失和改变数据的情况下完成转换。例如，可以把int值转换为long值，而不会出现任何问题。对于其他的，例如浮点类型转换为整型，则需要小心。</p>
-</li>
-</ol>
-<h3 id="重点摘录"><a href="#重点摘录" class="headerlink" title="重点摘录"></a>重点摘录</h3><ol>
-<li><p>面向对象编程(OOP)的本质是设计并扩展自己的数据类型。</p>
-</li>
-<li><p>程序必须记录的三个基本属性：</p>
 <ul>
-<li>信息储存在哪里</li>
-<li>储存什么值</li>
-<li>存储何种类型的信息</li>
+<li>圆圈中最后剩下的数字</li>
 </ul>
-</li>
-<li><p>C++命名规则：</p>
-<ul>
-<li>在名称中只能使用字母字符、数字和下划线(_)。</li>
-<li>名称的第一个字符不能是数字。</li>
-<li>区分大写字符和小写字符。</li>
-<li>不能将C++关键词用作字符。</li>
-<li>以两个下划线或下划线和大写字母打头的名称被保留给实现（编译器及其使用的资源）使用。以一个下划线开头的名称被保留给实现，用作全局标识符。</li>
-<li>C++对于名称的长度没有限制，名称中所有的字符都有意义，但有些平台有长度限制。</li>
-</ul>
-</li>
-<li><p>const限定符用于处理符号常量</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Months =<span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 0,1,···,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字（删除后从下一个数字开始* * 计数）。求出这个圆圈里剩下的最后一个数字。</span></span><br><span class="line"><span class="comment">* 例如，0、1、2、3、4这5个数字组成一个圆圈，从数字0开始每次删除第3个数字，则删除的前4个数字依次是2、0、4、1，因此最后剩下的数字是3。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lastRemaining = <span class="function"><span class="keyword">function</span>(<span class="params">n, m</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) arr.push(i);</span><br><span class="line">    <span class="keyword">let</span> head = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(arr.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        head = (head + m - <span class="number">1</span>) % arr.length;</span><br><span class="line">        arr.splice(head, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr[<span class="number">0</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<p>const优于#define的点：</p>
-<ul>
-<li>能够明确指定类型</li>
-<li>可以使用C++的作用域规则将定义限制在特定的函数或文件中</li>
-<li>可以将const用于更复杂的类型</li>
-</ul>
-<ol start="5">
-<li>通常cout会删除结尾的零。调用cout.setf()将覆盖这种行为。</li>
-</ol>
 
       
 
@@ -287,7 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -343,7 +305,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/03/%E5%89%91%E6%8C%87offer/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -357,18 +319,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          第四章-复合类型部分
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/29/C++%E5%AD%A6%E4%B9%A0/%E5%BC%80%E5%A7%8B%E5%AD%A6C++/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C++ learning</div>
+    <a href="/2021/06/02/%E7%AE%97%E6%B3%95-%E2%85%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法Ⅱ</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -399,8 +352,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://example.com/2020/11/30/C++%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/", 
-    sourceId: "C++学习/数据处理",
+    url: "http://example.com/2021/07/03/%E5%89%91%E6%8C%87offer/", 
+    sourceId: "剑指offer",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
