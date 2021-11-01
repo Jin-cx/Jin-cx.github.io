@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>MySql 基础学习 | Hexo</title>
+  <title>关于Nodejs&amp;Express&amp;MongoBD创建RESTAPI | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="MySql 基础学习">
-<meta property="og:url" content="http://example.com/2020/11/25/%E7%9E%8E%E5%87%A0%E6%8A%8A%E5%AD%A6/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/index.html">
+  <meta name="description" content="相关技术栈 mongoose :数据库  express：服务端框架  nodemon: 自动检测并刷新node服务  cors：解决跨域问题的库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Nodejs&amp;Express&amp;MongoBD创建RESTAPI">
+<meta property="og:url" content="http://example.com/2021/11/01/%E5%85%B3%E4%BA%8ENodejs-Express-MongoBD%E5%88%9B%E5%BB%BARESTAPI/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="相关技术栈 mongoose :数据库  express：服务端框架  nodemon: 自动检测并刷新node服务  cors：解决跨域问题的库">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-25T05:40:49.000Z">
-<meta property="article:modified_time" content="2021-05-25T07:46:55.319Z">
+<meta property="article:published_time" content="2021-11-01T06:50:40.000Z">
+<meta property="article:modified_time" content="2021-11-01T08:32:20.302Z">
 <meta property="article:author" content="Jin-cx">
-<meta property="article:tag" content="MySqL">
+<meta property="article:tag" content="综合技术">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -78,7 +80,7 @@
 			</ul>
 		</nav>
 		<nav>
-	    总文章数 17
+	    总文章数 19
 	</nav>
 		<nav class="header-smart-menu">
 			
@@ -171,14 +173,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-瞎几把学/MySql-基础学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于Nodejs-Express-MongoBD创建RESTAPI" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySql 基础学习
+      关于Nodejs&amp;Express&amp;MongoBD创建RESTAPI
     </h1>
   
 
@@ -194,15 +196,54 @@
 
 <!--显示阅读次数完毕-->
         
-        <a href="/2020/11/25/%E7%9E%8E%E5%87%A0%E6%8A%8A%E5%AD%A6/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-11-25T05:40:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-25</time>
+        <a href="/2021/11/01/%E5%85%B3%E4%BA%8ENodejs-Express-MongoBD%E5%88%9B%E5%BB%BARESTAPI/" class="archive-article-date">
+  	<time datetime="2021-11-01T06:50:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="相关技术栈"><a href="#相关技术栈" class="headerlink" title="相关技术栈"></a>相关技术栈</h1><ul>
+<li><p>mongoose :数据库</p>
+</li>
+<li><p>express：服务端框架</p>
+</li>
+<li><p>nodemon: 自动检测并刷新node服务</p>
+</li>
+<li><p>cors：解决跨域问题的库</p>
+<a id="more"></a>
+
+</li>
+</ul>
+<h1 id="创建服务端文件"><a href="#创建服务端文件" class="headerlink" title="创建服务端文件"></a>创建服务端文件</h1><p>配置自动刷新node服务</p>
+<p>在<code>package.json</code>的<code>scripts</code>对象中添加指令</p>
+<p><code>&quot;scripts&quot;:&#123;&quot;dev&quot;:nodemon server.js&#125;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="comment">// 解决跨域的库</span></span><br><span class="line"><span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)</span><br><span class="line">app.use(cors())</span><br><span class="line"><span class="comment">// json解析</span></span><br><span class="line">app.use(express.json())</span><br><span class="line"><span class="comment">//引入数据库包和模型</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> userModel = <span class="built_in">require</span>(<span class="string">&#x27;./models/user&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&quot;mongodb://localhost/test&quot;</span>, &#123; <span class="comment">// 会自动创建名为test的数据库</span></span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span>,</span><br><span class="line">    useCreateIndex: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line">mongoose.connection.once(<span class="string">&quot;open&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;连上了&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">/*userModel.find(&#123;&#125;, function (err, docs) &#123;</span></span><br><span class="line"><span class="comment">    if (!err) &#123;</span></span><br><span class="line"><span class="comment">        console.log(docs)</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;)*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* app.post(&#x27;/add&#x27;, async (req, res) =&gt; &#123;</span></span><br><span class="line"><span class="comment">    const data = &#123;</span></span><br><span class="line"><span class="comment">        title: req.body.title</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    let user = new userModel(data)</span></span><br><span class="line"><span class="comment">    try &#123;</span></span><br><span class="line"><span class="comment">        await user.save()</span></span><br><span class="line"><span class="comment">        res.json(&#123;</span></span><br><span class="line"><span class="comment">            data: true</span></span><br><span class="line"><span class="comment">        &#125;)</span></span><br><span class="line"><span class="comment">    &#125; catch (err) &#123;</span></span><br><span class="line"><span class="comment">        res.status(500).json(&#123;</span></span><br><span class="line"><span class="comment">            message: err.message</span></span><br><span class="line"><span class="comment">        &#125;)</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;) */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置一个get请求路径做测试</span></span><br><span class="line"><span class="comment">// 120.24.174.220/test</span></span><br><span class="line"><span class="comment">// 设置在3000端口/malist中存放数据库</span></span><br><span class="line">app.get(<span class="string">&quot;/malist&quot;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> data = <span class="keyword">await</span> userModel.find(&#123;&#125;,&#123;<span class="attr">_id</span>:<span class="number">0</span>&#125;)</span><br><span class="line">        res.json(data)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        res.status(<span class="number">500</span>).json(&#123;</span><br><span class="line">            message: err.message</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 设置服务的监听端口</span></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h1><p>根目录下创建一个文件夹必须为models，再创建一个文件<code>/models/user.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建的这个文件相当于一个数据库表，下面的对象就是表中的字段定义，会自动增加随机ID字段</span></span><br><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: <span class="built_in">String</span>,</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    data: <span class="built_in">Array</span></span><br><span class="line">&#125;,&#123;<span class="attr">collation</span>:<span class="string">&#x27;malaysia&#x27;</span>&#125;)</span><br><span class="line"><span class="built_in">module</span>.exports = mongoose.model(<span class="string">&#x27;malaysia&#x27;</span>, userSchema)</span><br></pre></td></tr></table></figure>
+
+<p>——————————</p>
+<h1 id="关于服务器"><a href="#关于服务器" class="headerlink" title="关于服务器"></a>关于服务器</h1><p>:star: 需求：Linux上让Node项目一直保持启动状态</p>
+<p>利用forever</p>
+<p> :one: 全局安装forever</p>
+<p><code>sudo npm install forever -g</code></p>
+<p>:two:进入到服务代码目录</p>
+<p>启动服务： <code>forever start server.js</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">写入环境：</span><br><span class="line">问题：forever:commond not found</span><br><span class="line">解决：ln -s ~&#x2F;node.js&#x2F;node...x64&#x2F;bin&#x2F;forever &#x2F;usr&#x2F;bin&#x2F;forever</span><br></pre></td></tr></table></figure>
+
+<p>查看当前forever启动服务目录</p>
+<p><code>forever list</code></p>
+<p>停止pid下的服务</p>
+<p><code>forever stop[pid]</code></p>
+<p>停止所有服务</p>
+<p><code>forever stopall</code></p>
+<h1 id="防火墙问题"><a href="#防火墙问题" class="headerlink" title="防火墙问题"></a>防火墙问题</h1><p>开启阿里云端口</p>
+<p>firewall-cmd –zone=public –add-port=888/tcp –permanent</p>
+<p>查看端口：<code>firewall-cmd --permanent --query-port=8888/tcp</code> -&gt;yes</p>
+<p>重启防火墙：<code>firewall-cmd --reload</code></p>
+
       
 
       
@@ -236,7 +277,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySqL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">综合技术</a>
         		</li>
       		
 		</ul>
@@ -292,7 +333,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/25/%E7%9E%8E%E5%87%A0%E6%8A%8A%E5%AD%A6/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/11/01/%E5%85%B3%E4%BA%8ENodejs-Express-MongoBD%E5%88%9B%E5%BB%BARESTAPI/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +347,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/26/%E9%A1%B9%E7%9B%AE/%E9%80%9A%E8%AE%AF%E5%BD%95%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/11/01/MongoDB-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          通讯录管理系统
+          MongoDB-基础学习
         
       </div>
     </a>
   
   
-    <a href="/2020/11/25/My-First-Blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">My First Blog</div>
+    <a href="/2021/10/16/React%E5%85%A8%E5%AE%B6%E6%A1%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React全家桶</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,8 +389,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://example.com/2020/11/25/%E7%9E%8E%E5%87%A0%E6%8A%8A%E5%AD%A6/MySql-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/", 
-    sourceId: "瞎几把学/MySql-基础学习",
+    url: "http://example.com/2021/11/01/%E5%85%B3%E4%BA%8ENodejs-Express-MongoBD%E5%88%9B%E5%BB%BARESTAPI/", 
+    sourceId: "关于Nodejs-Express-MongoBD创建RESTAPI",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -462,6 +503,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">说点啥</a>
               </li>
              
@@ -470,7 +515,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">综合技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySqL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据库学习</a>
               </li>
             
             <div class="clearfix"></div>
