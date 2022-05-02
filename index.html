@@ -202,8 +202,9 @@
 <p>3.要在组件componentWillUnmount中取消订阅</p>
 <p>fetch发送请求（关注分离的设计思想）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> response=<span class="keyword">await</span> fetch(<span class="string">&#x27;/api1/search/user2?q=$&#123;keyWord&#125;&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> data=<span class="keyword">await</span> response.json();</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;<span class="keyword">catch</span>(error)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;请求错误&#x27;</span>,error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <a class="article-more-a" href="/2022/05/02/github%E6%90%9C%E7%B4%A2%E6%A1%88%E4%BE%8B/#more">more >></a>
+        
       
 
       
@@ -216,7 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
         		</li>
       		
 		</ul>
@@ -290,23 +291,9 @@
 <li>缺点：不能配置多个代理</li>
 <li>工作方式：上述方法配置代理，当请求了3000不存在的资源时，请求会转发给5000(优先配置前端资源)</li>
 </ol>
-<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><ol>
-<li><p>第一步：创建代理配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在src下创建配置文件：src&#x2F;setupProxy.js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编写setupProxy.js配置具体代理规则：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> proxy=<span class="built_in">require</span>(<span class="string">&#x27;http-proxy-middleware&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports=<span class="function"><span class="keyword">function</span>(<span class="params">app</span>)</span>&#123;</span><br><span class="line">    app.use(<span class="string">&#x27;/api1&#x27;</span>,createProxyMiddleware(&#123;</span><br><span class="line">        target:<span class="string">&#x27;http://localhost:5000&#x27;</span>,</span><br><span class="line">        changeOrigin:<span class="literal">true</span>,</span><br><span class="line">        pathRewrite:&#123;<span class="string">&#x27;^/api1&#x27;</span>:<span class="string">&#x27;&#x27;</span>&#125;</span><br><span class="line">    &#125;),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<p> 说明:</p>
-<ol>
-<li>优点：可以配置多个代理，可以灵活的控制请求是否走代理。</li>
-<li>缺点：配置繁琐。前端请求资源时必须加前缀。</li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2022/05/02/react%E8%84%9A%E6%89%8B%E6%9E%B6%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86/#more">more >></a>
+        
       
 
       
@@ -1102,15 +1089,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">说点啥</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">说点啥</a>
               </li>
              
               <li class="article-tag-list-item">
